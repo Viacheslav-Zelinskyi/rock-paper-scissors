@@ -1,0 +1,30 @@
+.newgame_wrapper {
+    color: white;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5cdb95;
+}
+
+.addItemForm {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.gameMode_checkbox_block {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.itemTags {
+    margin-bottom: 30px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}

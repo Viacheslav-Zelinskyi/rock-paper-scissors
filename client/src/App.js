@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const host = "wss://" + window.location.hostname;
-    socket.current = new WebSocket("wss://rock-paper-game.herokuapp.com/");
+    socket.current = new WebSocket(host);
 
     socket.current.onmessage = (event) => {
       const message = JSON.parse(event.data);

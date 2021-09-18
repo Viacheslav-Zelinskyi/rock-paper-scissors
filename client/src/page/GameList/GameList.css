@@ -34,6 +34,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
+  margin-top: -20px;
   font-size: 20px;
 }
 

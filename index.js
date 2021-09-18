@@ -95,6 +95,6 @@ function sendToUser(message, username) {
   });
 }
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Server started!");
 });

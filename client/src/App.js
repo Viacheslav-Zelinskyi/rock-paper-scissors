@@ -18,7 +18,7 @@ function App() {
   if (username.length < 1) history.push("/");
 
   useEffect(() => {
-    const host = 'wss://' + window.location.hostname + ":8082";
+    const host = 'wss://' + window.location.hostname;
     socket.current = new WebSocket(host);
 
     socket.current.onmessage = (event) => {

@@ -1,10 +1,11 @@
 const express = require("express");
 const WebSocket = require("ws");
 const path = require("path");
-const res = require("express/lib/response");
+
+require('dotenv').config()
 
 const app = express();
-const wss = new WebSocket.Server({ port: 8082 });
+const wss = new WebSocket.Server({port: process.env.WS_PORT || 8082 });
 
 app.use("/", express.static(path.join(__dirname, "client/build")));
 

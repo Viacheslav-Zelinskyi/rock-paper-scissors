@@ -27,6 +27,7 @@ const MainPage = ({ setUsername, username, socket }) => {
           </Link>
           <Link to={username ? "/joingame" : ""}>
             <Button
+            style={{width: "80px"}}
               disabled={!username}
               variant="success"
               onClick={() => sendUsername(socket, username)}

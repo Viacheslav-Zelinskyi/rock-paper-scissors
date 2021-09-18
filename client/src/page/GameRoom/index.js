@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Badge, Accordion } from "react-bootstrap";
 import { Person } from "react-bootstrap-icons";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./GameRoom.css";
 
 const GameRoom = ({ username, items, player2Username, socket, result }) => {

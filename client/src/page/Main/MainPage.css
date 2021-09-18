@@ -18,6 +18,8 @@
   background-color: #edf5e1;
 }
 
-.form_button-group button {
-  margin: 5px;
+.form_button-group {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 10px;
 }

@@ -20,11 +20,10 @@ function App() {
 
   useEffect(() => {
     const host = "wss://" + window.location.hostname;
-    socket.current = new WebSocket(host);
+    socket.current = new WebSocket("wss://rock-paper-game.herokuapp.com/");
 
     socket.current.onmessage = (event) => {
       const message = JSON.parse(event.data);
-      console.log(message);
       switch (message.event) {
         case "gamelist":
           setGames(message.games);
@@ -40,7 +39,6 @@ function App() {
           setResult(message.playerTwoMove);
           break;
         default:
-          console.log(message);
           break;
       }
     };

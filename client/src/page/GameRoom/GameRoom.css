@@ -1,54 +1,55 @@
 .gameRoom_wrapper {
-    height: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .gameRoom_gameArea {
-    width: 500px;
-    height: 100vh;
-    background-color: #EDF5E1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 500px;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #edf5e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .gameRoom_players {
-    display: flex;
+  display: flex;
 }
 
 .gameRoom_playerBlock {
-    padding: 10px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+  padding: 10px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .gameRoom_playerBlock h5 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .gameRoom_buttonBlock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .gameRoom_tagsButton {
-    margin: 3px;
-    cursor: pointer;
+  margin: 3px;
+  cursor: pointer;
 }
 
-.helpBar{
-    margin: 20px;
-    width: 80%;
+.helpBar {
+  margin: 20px;
+  width: 80%;
 }

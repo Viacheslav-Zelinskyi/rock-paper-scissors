@@ -8,7 +8,7 @@ const gameCard = ({ nickname, items, socket }) => {
       <p className="gameCard_nickname">{nickname}</p>
       <div className="gameCard_tagsBlock">
         {items.map((item) => (
-          <Badge bg="danger" className="gameCard_tags">
+          <Badge key={item + Date.now()} bg="danger" className="gameCard_tags">
             {item}
           </Badge>
         ))}

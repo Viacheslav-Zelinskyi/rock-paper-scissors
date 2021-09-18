@@ -1,13 +1,17 @@
 const express = require("express");
 const WebSocket = require("ws");
+const http = require("http");
 const path = require("path");
 
 require("dotenv").config();
 
 const app = express();
-const wss = new WebSocket.Server({ port: process.env.WS_PORT || 8082 }, () => {
-  console.log("WebSocketServer started at port: ", process.env.WS_PORT || 8082);
+const httpServer = http.createServer(app);
+const wss = new WebSocket.Server({
+  server: httpServer,
 });
+const port = process.env.PORT || 5000;
+httpServer.listen(port);
 
 app.use("/", express.static(path.join(__dirname, "client/build")));
 
@@ -96,8 +100,4 @@ function sendToUser(message, username) {
       client.send(JSON.stringify(message));
     }
   });
-}
-
-app.listen(process.env.PORT || 5000, () => {
-  console.log("Server started!");
-});
+};

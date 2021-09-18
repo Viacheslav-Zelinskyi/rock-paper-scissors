@@ -10,15 +10,16 @@ function App() {
   const [games, setGames] = useState([]);
   const [items, setItems] = useState([]);
   const [player2Username, setPlayer2Username] = useState("");
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState("");
 
   const socket = useRef();
   const history = useHistory();
 
-  if (username.length < 1) history.push("/");
+  if (username.length < 1 && window.location.pathname !== "/")
+    history.push("/");
 
   useEffect(() => {
-    const host = 'wss://' + window.location.hostname;
+    const host = "wss://" + window.location.hostname;
     socket.current = new WebSocket(host);
 
     socket.current.onmessage = (event) => {
@@ -33,10 +34,10 @@ function App() {
           break;
         case "gameinfo":
           setPlayer2Username(message.game.username);
-          setItems(message.game.items)
+          setItems(message.game.items);
           break;
         case "gameresult":
-          setResult(message.playerTwoMove)
+          setResult(message.playerTwoMove);
           break;
         default:
           console.log(message);

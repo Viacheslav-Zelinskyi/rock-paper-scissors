@@ -100,4 +100,4 @@ function sendToUser(message, username) {
       client.send(JSON.stringify(message));
     }
   });
-};
+}

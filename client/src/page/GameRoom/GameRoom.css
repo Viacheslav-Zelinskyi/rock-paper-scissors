@@ -12,13 +12,18 @@
     height: 100vh;
     background-color: #EDF5E1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.gameRoom_players {
+    display: flex;
+}
+
 .gameRoom_playerBlock {
-    padding: 20px;
-    width: 100%;
+    padding: 10px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,4 +46,9 @@
 .gameRoom_tagsButton {
     margin: 3px;
     cursor: pointer;
+}
+
+.helpBar{
+    margin: 20px;
+    width: 80%;
 }

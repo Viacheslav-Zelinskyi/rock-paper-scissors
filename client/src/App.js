@@ -18,7 +18,7 @@ function App() {
   if (username.length < 1) history.push("/");
 
   useEffect(() => {
-    socket.current = new WebSocket("ws://localhost:8082");
+    socket.current = new WebSocket(process.env.REACT_APP_WEB_SOCKET_URL);
 
     socket.current.onmessage = (event) => {
       const message = JSON.parse(event.data);
